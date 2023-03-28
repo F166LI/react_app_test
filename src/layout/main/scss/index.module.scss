@@ -1,0 +1,119 @@
+.head {
+  background-color: #160C28;
+  margin-top: -10px;
+  padding-bottom: 10px;
+
+  .ul,
+  .ul>li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .ul {
+    width: 344px;
+    margin: 0 auto;
+  }
+
+  .bg {
+    width: 86px;
+    height: 86px;
+    background-image: url('../../../assets/icon/main_sprites.png');
+    background-position-x: -10px;
+    transform: scale(0.5);
+    font-size: 32px;
+    color: rgba(#fff, 0.65);
+    display: inline-block;
+    position: relative;
+
+    >p {
+      position: absolute;
+      bottom: -60px;
+      left: -10px;
+    }
+
+    &:nth-child(1) {
+      >p {
+        left: -18px;
+      }
+    }
+
+    &:nth-child(2) {
+      >p {
+        left: -6px;
+      }
+    }
+
+    &:nth-child(3) {
+      >p {
+        left: -6px;
+      }
+    }
+    &:nth-child(4) {
+      >p {
+        left: 0px;
+      }
+    }
+
+    &.brands {
+      background-position-y: -312px;
+    }
+
+    &.brands-active {
+      color: #fff;
+      color: #fff;
+      background-position-y: -206px;
+    }
+
+    &.charities {
+      background-position-y: -524px;
+    }
+
+    &.charities-active {
+      color: #fff;
+      background-position-y: -418px;
+    }
+
+    &.impact {
+      background-position-y: -736px;
+    }
+
+    &.impact-active {
+      color: #fff;
+      background-position-y: -630px;
+    }
+
+    &.wallet {
+      background-position-y: -108px;
+    }
+
+    &.wallet-active {
+      color: #fff;
+      background-position-y: -10px;
+    }
+  }
+
+}
+
+.body {
+  .formItem {
+    margin-bottom: 16px;
+
+    &.none {
+      margin-bottom: 0;
+    }
+  }
+
+  // .forgotPassword {
+  //   cursor: pointer;;
+  // }
+}
+
+.divider {
+  color: rgba(#fff, 0.65) !important;
+
+  &::after,
+  &::before {
+    background-color: rgba(#fff, 0.65);
+  }
+}

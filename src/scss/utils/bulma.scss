@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: RooneySans-Regular;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../font/RooneySans-Regular/RooneySans-Regular.eot?v=1.0');
+  src: url('../../font/RooneySans-Regular/RooneySans-Regular_iefix.eot?#iefix&v=1.0') format("embedded-opentype"), url('../../font/RooneySans-Regular/RooneySans-Regular.woff2?v=1.0') format("woff2"), url('../../font/RooneySans-Regular/RooneySans-Regular.woff?v=1.0') format("woff"), url('../../font/RooneySans-Regular/RooneySans-Regular.ttf?v=1.0') format("truetype")
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// $body-color: #ed556a;
+$family-sans-serif: RooneySans-Regular,
+BlinkMacSystemFont,
+-apple-system,
+"Segoe UI",
+"Roboto",
+"Oxygen",
+"Ubuntu",
+"Cantarell",
+"Fira Sans",
+"Droid Sans",
+"Helvetica Neue",
+"Helvetica",
+"Arial",
+sans-serif;
+$hero-body-padding: 0;
+$hero-body-padding-tablet: 0;
+$hero-body-padding-small: 0;
+$hero-body-padding-medium: 0;
+$hero-body-padding-large: 0;
+$link: rgba(#fff, 0.65);
+$link-hover: rgba(#fff, 1);
+$control-height: auto;
+
+.hero.is-fullheight {
+  &.page-authentication {
+    user-drag: none;
+    color: rgba(#fff, 0.65);
+    background: radial-gradient(97.01% 51.8% at 50% 50%, #3A2861 37.5%, #1E0E40 81.77%, #180B33 100%)
+  }
+
+  &.loading {
+    animation-name: fadeIn;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+  }
+
+  &.page-main {
+    user-drag: none;
+    color: #160C28;
+  }
+}
+
+@import "~bulma/sass/utilities/_all.sass";
+
+@import "~bulma/sass/base/generic.sass";
+@import "~bulma/sass/base/animations.sass";
+
+// @import "~bulma/sass/elements/content.sass";
+@import "~bulma/sass/elements/box.sass";
+// @import "~bulma/sass/elements/button.sass";
+// @import "~bulma/sass/elements/image.sass";
+
+@import "~bulma/sass/grid/_all.sass";
+@import "~bulma/sass/helpers/_all.sass";
+@import "~bulma/sass/layout/hero.sass";

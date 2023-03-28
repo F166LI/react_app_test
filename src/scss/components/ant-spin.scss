@@ -1,0 +1,14 @@
+.ant-spin-nested-loading.loading {
+  >div {
+    >.ant-spin {
+      max-height: 100%;
+    }
+
+    .ant-spin {
+      .ant-spin-dot-item {
+        background: radial-gradient(97.01% 51.8% at 50% 50%, #3A2861 37.5%, #1E0E40 81.77%, #180B33 100%)
+      }
+    }
+  }
+
+}

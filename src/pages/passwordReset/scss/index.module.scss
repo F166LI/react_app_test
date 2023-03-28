@@ -1,0 +1,28 @@
+.head {
+
+  .h1 {
+    color: #fff;
+  }
+
+}
+
+.fixed {
+  position: fixed;
+  top: 20px;
+  left: 40px;
+  z-index: 1;
+}
+
+.body {
+  .formItem {
+    margin-bottom: 16px;
+
+    &.none {
+      margin-bottom: 0;
+    }
+  }
+
+  // .forgotPassword {
+  //   cursor: pointer;;
+  // }
+}
