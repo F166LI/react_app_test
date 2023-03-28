@@ -2,7 +2,7 @@ import { useMemo, lazy, useEffect, useState, useCallback } from 'react';
 import { useLocation, useNavigate } from "react-router-dom"
 import { ConfigProvider, Button, Form, Input, Divider } from 'antd';
 
-import store from '@/store/loading';
+import store from '@/store';
 
 import Authentication from "@/layout/authentication";
 import scss from "./scss/index.module.scss";
@@ -24,20 +24,16 @@ const FormNode = () => {
   }
 
   const onFinish = (values) => {
-    navigate('/charities');
-    console.log('Success:', values);
+    $api.post('login', values)
+      .then(({ data }) => {
+        store.dispatch({ type: 'user/login', data })
+        navigate('/charities');
+      })
   };
   const onFinishFailed = (errorInfo) => {
-
-    // store.dispatch({ type: 'loading/open' })
-
-    $api.post('login', {
-      username: 'aaa',
-      password: '123'
-    })
-
     console.log('Failed:', errorInfo);
   };
+
 
   return (
     <Form
@@ -50,7 +46,7 @@ const FormNode = () => {
     >
       <Form.Item
         className={scss.formItem}
-        name="email"
+        name="username"
         rules={[
           {
             required: true,

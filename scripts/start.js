@@ -101,7 +101,6 @@ checkBrowsers(paths.appPath, isInteractive)
     });
     // Load proxy config
     // const { REACT_APP_API } = process.env
-
     // const proxySetting = {
     //   [REACT_APP_API]: {
     //     target: REACT_APP_API,

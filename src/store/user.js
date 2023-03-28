@@ -1,18 +1,19 @@
 import { configureStore, createSlice, combineReducers } from '@reduxjs/toolkit';
+import { getToken, setToken, removeToken } from '@/utils/auth'
 
 const initialState = {
-  loading: false,
+  token: getToken(),
+  userInfo: localStorage.getItem('USER_INFO') || null,
 };
 
 const counterSlice = createSlice({
-  name: 'loading',
+  name: 'user',
   initialState,
   reducers: {
-    open: (state) => {
-      state.loading = true;
-    },
-    close: (state) => {
-      state.loading = false;
+    login: (state, { data }) => {
+      setToken(data.token)
+      state.userInfo = data;
+      localStorage.setItem('USER_INFO', data)
     },
   },
 });
@@ -20,7 +21,5 @@ const counterSlice = createSlice({
 // const store = configureStore({
 //   reducer: counterSlice.reducer,
 // });
-
-// export const { open, close } = counterSlice.actions;
 
 export default counterSlice.reducer;

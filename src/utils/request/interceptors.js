@@ -4,7 +4,7 @@ import { notification } from "antd"
 import { getToken } from '@/utils/auth'
 
 // import router from "@/router";
-import store from "@/store/loading";
+import store from "@/store";
 
 import tips from "./tips";
 // const api_whiteList = ['/api-business/get/complete'];

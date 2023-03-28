@@ -16,11 +16,11 @@
     "redux": "^4.2.1"
   },
   "scripts": {
-    "serve": "react-app-rewired start",
-    "build": "dotenv -e .env.production react-app-rewired build",
-    "serve:dev": "react-app-rewired start",
-    "build:dev": "dotenv -e .env.development react-app-rewired build",
-    "build:pro": "dotenv -e .env.production react-app-rewired build"
+    "serve": "dotenv -e .env.development node scripts/start.js",
+    "build": "dotenv -e .env.production node scripts/build.js",
+    "serve:dev": "dotenv -e .env.development node scripts/start.js",
+    "build:dev": "dotenv -e .env.development node scripts/build.js",
+    "build:pro": "dotenv -e .env.production node scripts/build.js"
   },
   "browserslist": {
     "production": [

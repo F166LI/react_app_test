@@ -15,6 +15,8 @@ import brands from "./module/brands";
 import wallet from "./module/wallet";
 import impact from "./module/impact";
 
+import { getToken, setToken, removeToken } from '@/utils/auth'
+
 export default [
   {
     path: '*',
