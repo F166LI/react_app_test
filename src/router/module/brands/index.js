@@ -1,9 +1,9 @@
-import lazy from "@/router/lazy";
+import lazy, { AuthenticationComponent } from "@/router/lazy";
 const Brands = lazy(import('@/pages/brands'))
 
 export default [
   {
     path: '/brands',
-    element: <Brands />
+    element: <AuthenticationComponent><Brands /></AuthenticationComponent>
   },
 ]

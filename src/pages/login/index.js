@@ -1,5 +1,6 @@
 import { useMemo, lazy, useEffect, useState, useCallback } from 'react';
 import { useLocation, useNavigate } from "react-router-dom"
+import { useDispatch } from 'react-redux';
 import { ConfigProvider, Button, Form, Input, Divider } from 'antd';
 
 import store from '@/store';
@@ -12,6 +13,7 @@ import $api from "./api";
 
 const FormNode = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const defaultData = {
     colorPrimary: '#333',
@@ -31,6 +33,11 @@ const FormNode = () => {
       })
   };
   const onFinishFailed = (errorInfo) => {
+    dispatch({ type: 'loading/open', a: 1 })
+
+    setTimeout(() => {
+      dispatch({ type: 'loading/close', v: 23 })
+    }, 3000);
     console.log('Failed:', errorInfo);
   };
 
