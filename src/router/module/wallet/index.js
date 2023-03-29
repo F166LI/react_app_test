@@ -1,9 +1,9 @@
-import lazy, { AuthenticationComponent } from "@/router/lazy";
+import lazy, { Authentication } from "@/router/lazy";
 const Wallet = lazy(import('@/pages/wallet'))
 
 export default [
   {
     path: '/wallet',
-    element: <AuthenticationComponent><Wallet /></AuthenticationComponent>
+    element: <Authentication><Wallet /></Authentication>
   },
 ]

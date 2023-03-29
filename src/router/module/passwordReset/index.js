@@ -1,9 +1,9 @@
-import lazy from "@/router/lazy";
+import lazy, { Authentication } from "@/router/lazy";
 const PasswordReset = lazy(import('@/pages/passwordReset'))
 
 export default [
   {
     path: '/passwordReset',
-    element: <PasswordReset />
+    element: <Authentication><PasswordReset /></Authentication>
   },
 ]

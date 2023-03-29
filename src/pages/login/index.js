@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { ConfigProvider, Button, Form, Input, Divider } from 'antd';
 
 import store from '@/store';
+import { open, close } from '@/store/loading';
 
 import Authentication from "@/layout/authentication";
 import scss from "./scss/index.module.scss";
@@ -33,12 +34,13 @@ const FormNode = () => {
       })
   };
   const onFinishFailed = (errorInfo) => {
-    dispatch({ type: 'loading/open', a: 1 })
-
+    store.dispatch({ type: 'loading/open' })
+    console.log('loading状态：', store.getState().loading);
     setTimeout(() => {
-      dispatch({ type: 'loading/close', v: 23 })
-    }, 3000);
-    console.log('Failed:', errorInfo);
+      store.dispatch({ type: 'loading/close' })
+      console.log('loading状态：', store.getState().loading);
+    }, 1000);
+    // console.log('Failed:', errorInfo);
   };
 
 
